@@ -1,0 +1,14 @@
+<div class="headerContainer">
+  <div class="logoContainer flex-auto">
+    <img class="h-w-100"
+      src="https://media-exp1.licdn.com/dms/image/C510BAQF1Qg55QLCsiw/company-logo_200_200/0/1544514749442?e=2159024400&v=beta&t=P6RaHsqcw-ABmJqpmS3SMEjCsDqZBDvLAKH1bI0jZDE">
+  </div>
+  <div class="addEmployeeButton" *ngIf="checkLocation()">
+    <button type="button" (click)="employeeService.showAddModal = true" class="btn btn-primary cursor-hand theme-button  theme-background outline-none">
+      Add Employee
+    </button>
+  </div>
+</div>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

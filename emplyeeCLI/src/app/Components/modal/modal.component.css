@@ -1,0 +1,96 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 99999;
+}
+
+.dialog {
+    z-index: 100000;
+    position: fixed;
+    min-height: 200px;
+    margin: unset !important;
+    left: 50%;
+    top: 50%;
+    -moz-transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50% , -50%);
+    -ms-transform: translate(-50% , -50%);
+    transform: translate(-50% , -50%);
+    border-radius: 4px;
+    box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14), 0 5px 24px 4px rgba(0, 0, 0, 0.12);
+    font-family: Montserrat-Light;
+    width: 410px;
+    background-color: #ffffff;
+    -moz-animation: modalComeIn 0.27s  ease;
+    -webkit-animation: modalComeIn 0.27s  ease;
+    animation: modalComeIn 0.27s  ease;
+}
+@keyframes modalComeIn {
+    0% {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    100% {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+.dialog__close-btn {
+    border: 0;
+    background: none;
+    color: #2d2d2d;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 1.2em;
+}
+.dialog.style-2 {
+    z-index: 100000;
+    position: fixed;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-height: 200px;
+    left: 50%;
+    top: 50%;
+    -moz-transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50% , -50%);
+    -ms-transform: translate(-50% , -50%);
+    transform: translate(-50% , -50%);
+    border-radius: 4px;
+    box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14), 0 5px 24px 4px rgba(0, 0, 0, 0.12);
+    font-family: Montserrat-Light;
+    width: 460px;
+    max-width: calc(100vw - 20px);
+    background-color: #ffffff;
+}
+.dialog > .dialog-content-container{
+    -moz-animation: slideUp 0.25s  ease-in;
+    -webkit-animation: slideUp 0.25s  ease-in;
+    animation: slideUp 0.25s  ease-in;
+}
+@keyframes slideUp {
+    0% {
+      visibility: hidden;
+      opacity: 0;
+      -moz-transform: translate3d(0,10px,0);
+      -ms-transform: translate3d(0,10px,0);
+      -webkit-transform: translate3d(0,10px,0);
+      transform: translate3d(0,10px,0);
+    }
+    100% {
+      visibility: visible;
+      opacity: 1;
+      -moz-transform: translate3d(0,0px,0);
+      -ms-transform: translate3d(0,0px,0);
+      -webkit-transform: translate3d(0,0px,0);
+      transform: translate3d(0,0px,0);
+    }
+  }
+  .dialog.large-width {
+    width: 71%;
+  }

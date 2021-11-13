@@ -1,0 +1,6 @@
+<div *ngIf="visible" class="dialog {{version}}">
+  <div class="dialog-content-container">
+      <ng-content></ng-content>
+  </div>
+</div>
+<div *ngIf="visible" class="overlay" (click)="close()"></div>
